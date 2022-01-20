@@ -14,7 +14,7 @@ struct GMapApp: App {
     
     init() {
         FirebaseApp.configure()
-        GMSServices.provideAPIKey("AIzaSyAdAE05pEyETxfZptg5LdthkKPaocN6w3M")
+        GMSServices.provideAPIKey("")
         UINavigationBar.appearance().setBackgroundImage(UIImage(named: "bg"), for: UIBarMetrics.default)
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
         UITextView.appearance().backgroundColor = .clear
