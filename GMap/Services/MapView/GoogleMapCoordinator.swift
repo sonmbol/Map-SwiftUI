@@ -1,5 +1,5 @@
 //
-//  Coordinator.swift
+//  GoogleMapCoordinator.swift
 //  GMap
 //
 //  Created by ahmed abdalla on 05/01/2022.
@@ -9,7 +9,7 @@ import SwiftUI
 import GoogleMaps
 
 
-class Coordinator: NSObject ,ObservableObject{
+class GoogleMapCoordinator: NSObject ,ObservableObject{
     
     
     let owner: GoogleMapViewModel       // access to owner view members,
@@ -46,7 +46,7 @@ class Coordinator: NSObject ,ObservableObject{
 
 // MARK: - Map DELEGATE
 
-extension Coordinator : GMSMapViewDelegate{
+extension GoogleMapCoordinator : GMSMapViewDelegate{
     
     /**
      * Called repeatedly during any animations or gestures on the map (or once, if the camera is
