@@ -39,7 +39,7 @@ class MapViewModel: ObservableObject {
     // MARK: - add new place in firestore
     func addPlace(){
         var uid = ""
-        if let UID = Helper.load(key: "FUID"){
+         if let UID = Persistence.loadKeyChain(key: Constants.UID){
             uid = String(decoding: UID, as: UTF8.self)
         }
         let data : [String : Any] = [
