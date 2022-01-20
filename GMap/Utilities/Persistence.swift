@@ -1,5 +1,5 @@
 //
-//  Helper.swift
+//  Persistence.swift
 //  GMap
 //
 //  Created by ahmed abdalla on 06/01/2022.
@@ -7,8 +7,8 @@
 
 import Foundation
 
-class Helper {
-    class func save(key : String,data :NSData)->OSStatus{
+class Persistence {
+    class func saveKeyChain(key : String,data :NSData)->OSStatus{
         let query = [
             kSecClass as String : kSecClassGenericPassword as String,
             kSecAttrAccount as String : key,
@@ -18,7 +18,7 @@ class Helper {
         return SecItemAdd(query as CFDictionary, nil)
     }
     
-    class func load(key:String)->NSData? {
+    class func loadKeyChain(key:String)->NSData? {
         let query = [
             kSecClass as String : kSecClassGenericPassword as String,
             kSecAttrAccount as String : key,
