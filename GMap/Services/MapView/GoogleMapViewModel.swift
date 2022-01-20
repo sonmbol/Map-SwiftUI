@@ -40,7 +40,7 @@ struct GoogleMapViewModel : UIViewRepresentable {
         
     }
     
-    func makeCoordinator() -> Coordinator {
+    func makeCoordinator() -> GoogleMapCoordinator {
         return Coordinator(self)
     }
     
