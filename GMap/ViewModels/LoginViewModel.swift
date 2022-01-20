@@ -50,7 +50,7 @@ class LoginViewModel: ObservableObject {
         isLoading = false
         if let result = Result {
             userSession = result.user
-            let success = Helper.save(key: "FUID", data: result.user.uid.data(using: .utf8)! as NSData)
+            let success = Persistence.saveKeyChain(key: Constants.UID, data: result.user.uid.data(using: .utf8)! as NSData)
             print("MARK : Saving UID is \(success)")
             
         }
